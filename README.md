@@ -1,7 +1,7 @@
 # Kelompok-8-IF231-E
 
-GamePlay/Aturan Bermain
-Kelompok 8
+##GamePlay/Aturan Bermain
+##Kelompok 8
 
 
 Data anggota kelompok:
@@ -15,36 +15,36 @@ Peraturan / ketentuan:
 * Waktu yang kami gunakan di sini yaitu 1 detik di dunia nyata = 1 Menit di in game
 * Jika antara Makan , Main , dan juga tidur mencapai 0 , game akan berakhir dan akan memunculkan popup beserta tombol untuk nantinya pemain dapat memulai permainan dari awal
 * Berikut adalah kondisi dari setiap aktifitas yang ada :
-_____
+
 Kondisi keadaan : Diam
 Makan: -1/3 Menit in game (3 detik)
 Tidur :-1/10 Menit in game (10 detik)
 Main : -1/5 Menit in game (5 detik)
 Belajar : -1/30 Menit in game (30 detik)
-_________________________________
+
 List dari kondisi per 1x klik tombol Makan , Tidur, Main ,Belajar dalam halaman game  :
-_____
+
 Kondisi : Makan
 Cycle yang dijalankan : 10 cycle (10 Menit in game)
 Makan: +1% / 1cycle Total /1x Click +10%
 Tidur :-1% / 5cycle Total /1x Click -2%
 Main: -1% / 5cycle Total /1x Click -2%
 Belajar : -1% / 10cycle Total /1x Click -1%
-________
+
 Kondisi : Tidur
 Cycle yang dijalankan : 25 cycle (25 Menit in game)
 Tidur: +1% / 1cycle Total /1x Click +25%
 Makan :-1% / 5cycle Total /1x Click -5%
 Main: -1% / 3cycle Total /1x Click -8%
 Belajar : -1% / 10cycle Total /1x Click -2%
-________________
+
 Kondisi : Main
 Cycle yang dijalankan : 15 cycle ( Menit in game)
 Main: +1% / 1cycle Total /1x Click +15%
 Makan :-1% / 3cycle Total /1x Click -5%
 Tidur: -1% / 3cycle Total /1x Click -5%
 Belajar : -1% / 5cycle Total /1x Click -3%
-___________
+
 Kondisi : Belajar 
 Cycle yang dijalankan : 20 cycle ( Menit in game)
 Belajar: +1% / 1cycle Total /1x Click +20%
