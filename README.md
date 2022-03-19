@@ -1,7 +1,7 @@
 # Kelompok-8-IF231-E
 
-## GamePlay/Aturan Bermain
-## Kelompok 8
+### GamePlay/Aturan Bermain
+### Kelompok 8
 
 
 ### Data anggota kelompok:
