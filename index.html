@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MID Exam</title>
+
+    <link rel="stylesheet" href="aset/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="aset/css/sweetalert2.css" />
+    <link rel="stylesheet" href="aset/icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="aset/icons/fontawesome/css/all.css">
+</head>
+
+<body>
+    <header class="container bg-primary text-white">
+        <div class="row">
+            <div class="col-12 py-1 text-center">
+                <h3 class="display-3"><i class="bi bi-trophy"></i></h3>
+                <h6 class="display-6">MID Exam</h6>
+            </div>
+        </div>
+    </header>
+    <main id="main" class="container border image bg-image">
+        <div id="login">
+            <div class="row justify-content-around align-items-center">
+                <div class="col-4 py-5 align-items-center d-flex flex-row-reverse">
+                    <button type="button" class="btn btn-outline-secondary waves-effect px-3" onclick="prevImage();">
+                        <i class="bi bi-chevron-double-left" aria-hidden="true"></i></button>
+                </div>
+                <div class="col-4 py-5 align-items-center">
+                    <div class="text-center">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-text">Choose your avatar</p>
+                            </div>
+                            <div class="text-center">
+                                <img id="avatar" class="img-fluid rounded" width="80%">
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 py-5 align-items-center">
+                    <button type="button" class="btn btn-outline-secondary waves-effect px-3" onclick="nextImage();">
+                        <i class="bi bi-chevron-double-right" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <div class="row">
+                    <div class="form-group text-center">
+                        <label for="inputName" class="control-label">Enter your name here ...</label>
+                        <input type="text" class="form-control" id="inputName">
+                    </div>
+                    <div>&nbsp;</div>
+                    <div class="form-group text-center mw-100">
+                        <button class="btn btn-outline-primary waves-effect max-width: 100%" onclick="start()"> Play
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="utama">
+            <div class="d-flex justify-content-center ">
+                <div class="card w-100 text-center">
+                    <div id="bgbar" class="card-body text-dark bg-light">
+                        <div class="row">
+                            <div class="col-2">
+                                <h2><i class="fa fa-hamburger"></i></h2>
+                            </div>
+                            <div class="col-4">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped" id="pro_makan" role="progressbar" style="width: 25%;" aria-valuenow="25"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <h2><i class="fa fa-bed"></i></h2>
+                            </div>
+                            <div class="col-4">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped" id="pro_tidur" role="progressbar" style="width: 25%;" aria-valuenow="25"
+                                        aria-valuemin="0" aria-valuemax="100">25%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                <h2><i class="fa fa-gamepad"></i></h2>
+                            </div>
+                            <div class="col-4">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" id="pro_main" style="width: 25%;" aria-valuenow="25"
+                                        aria-valuemin="0" aria-valuemax="100">25%</div>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <h2><i class="fa fa-book"></i></h2>
+                            </div>
+                            <div class="col-4">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" id="pro_belajar" style="width: 25%;" aria-valuenow="25"
+                                        aria-valuemin="0" aria-valuemax="100">25%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <h4>Semester <span id="semester"></span></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+            <div class="col-3" >&nbsp;</div>
+            <div class="col-6 justify-content-center ">
+                <div class="row text-center">
+                    <div class="col text-center">
+                        <div id="bgaktivitas" class="card bg-dark text-light bg-gradient">
+                            <div class="card-body bg-primary">
+                                <h5 id="greeting"></h6>
+                                <span id="waktu"></span>
+                            </div>
+                            <div class="text-center col">
+                                <img id="aktivitas" class="img-fluid rounded" height="25%" width="25%">
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span id="ketAktivitas"></span>
+                        </div>
+                    </div>
+                </div> 
+                <br>  
+            </div>
+            <br>
+            <div class="col-3" >&nbsp;</div>
+            </div>
+            <div class="d-flex justify-content-center ">
+                <div class="row">
+                    <div class="col text-center">
+                        <div class="input-group mb-3">
+                            <button type="button" id="btnMakan" class="btn btn-primary" onclick="aktivitas('Makan');">
+                                <i class="fa fa-hamburger"></i> Makan</button>&nbsp;
+                            <button type="button" id="btnTidur" class="btn btn-primary" onclick="aktivitas('Istirahat');">
+                                <i class="fa fa-bed"></i> Tidur</button>
+                        </div> 
+                        <div class="input-group mb-3">
+                            <button type="button" id="btnMain" class="btn btn-primary" onclick="aktivitas('Main');">
+                                <i class="fa fa-gamepad"></i> Main</button>&nbsp;
+                            <button type="button" id="btnBelajar" class="btn btn-primary" onclick="aktivitas('Belajar');">
+                                    <i class="fa fa-book"></i> Belajar</button>
+                        </div> 
+                    </div>
+                </div> 
+                <br>  
+            </div>     
+        </div>
+        <br><br>
+    </main>
+    <footer class="container bg-light">
+        <div class="row">
+            <div class="col-12 py-4">
+                &copy; 2022 (Kelompok 8)
+            </div>
+        </div>
+    </footer>
+
+    <script src="aset/js/bootstrap.min.js"></script>
+    <script src="aset/js/sweetalert2.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
+<style>
+    .image {
+        height: 100%;
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+</style>

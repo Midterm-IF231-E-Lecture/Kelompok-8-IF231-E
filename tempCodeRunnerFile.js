@@ -1,0 +1,1 @@
+document.getElementById("utama").className="p-3 mb-2 bg-dark text-white";
